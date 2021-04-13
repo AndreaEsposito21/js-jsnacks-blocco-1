@@ -96,6 +96,8 @@ for (var j = 0; j < arrayZucchine.length; j++) {
 
     };
 };
+console.log(arrayZucchinePiccole);
+console.log(arrayZucchineGrandi);
 
 // Peso totale di arrayZucchinePiccole
 var sommaPesiZucchinePiccole = pesoZucchine(arrayZucchinePiccole);

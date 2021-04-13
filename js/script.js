@@ -67,34 +67,55 @@ var arrayZucchine = [
     }
 ];
 
+var sommaPesoZucchine = 0;
+
+// Array zucchine lunghe < 15 cm
 var arrayZucchinePiccole = [];
 
+// Array zucchine lunghe > 15 cm
 var arrayZucchineGrandi= [];
 
-// Somma dei pesi di tutte le zucchine
-//
-var sommaPesoZucchine = 0;
-for (var i = 0; i < arrayZucchine.length; i++) {
-    var thisZucchine = arrayZucchine[i];
+// Peso totale di arrayZucchine
+var sommaPesiZucchineTotali = pesoZucchine(arrayZucchine);
+console.log('Somma peso totale: ', sommaPesiZucchineTotali, 'kg');
 
-    // Somma peso totale zucchine
-    sommaPesoZucchine += thisZucchine.peso;
-    
-    // Lunghezza zucchine
-    //
+// Lunghezza zucchine
+//
+for (var j = 0; j < arrayZucchine.length; j++) {
+    var thisLunghezza = arrayZucchine[j];
+
     // Se la lunghezza delle zucchine è inferiore a 15, allora riempiranno arrayZucchinePiccole
     // Altrimenti se la lunghezza delle zucchine è maggiore di 15, priempiranno arrayZucchineGrandi
-    if (thisZucchine.lunghezza < 15) {
+    if (thisLunghezza.lunghezza < 15) {
 
-        arrayZucchinePiccole.push(thisZucchine);
+        arrayZucchinePiccole.push(thisLunghezza);
 
-    } else if (thisZucchine.lunghezza > 15) {
+    } else if (thisLunghezza.lunghezza > 15) {
         
-        arrayZucchineGrandi.push(thisZucchine);
+        arrayZucchineGrandi.push(thisLunghezza);
 
     };
 };
 
-console.log('Somma peso totale: ', sommaPesoZucchine, 'kg');
+// Peso totale di arrayZucchinePiccole
+var sommaPesiZucchinePiccole = pesoZucchine(arrayZucchinePiccole);
+console.log('Somma peso zucchine piccole: ', sommaPesiZucchinePiccole, 'kg');
 
+// Peso totale di arrayZucchineGrandi
+var sommaPesiZucchineGrandi = pesoZucchine(arrayZucchineGrandi);
+console.log('Somma peso zucchine grandi: ', sommaPesiZucchineGrandi, 'kg');
+
+// Funzione che somma i pesi delle zucchine
+//
+function pesoZucchine(arrayOggettiZucchine) {
+    // Somma dei pesi di tutte le zucchine
+    for (var i = 0; i < arrayOggettiZucchine.length; i++) {
+        var thisZucchine = arrayOggettiZucchine[i];
+
+        // Somma peso zucchine
+        sommaPesoZucchine += thisZucchine.peso;
+    };
+
+    return sommaPesoZucchine;
+};
 

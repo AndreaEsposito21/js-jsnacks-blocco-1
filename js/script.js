@@ -96,8 +96,8 @@ for (var j = 0; j < arrayZucchine.length; j++) {
 };
 
 // TEST
-console.log('zucchine piccole', arrayZucchinePiccole);
-console.log('zucchine grandi', arrayZucchineGrandi);
+// console.log('zucchine piccole', arrayZucchinePiccole);
+// console.log('zucchine grandi', arrayZucchineGrandi);
 //
 
 
@@ -116,7 +116,8 @@ function pesoZucchine(arrayOggettiZucchine) {
 
     var sommaPesoZucchine = 0;
 
-    console.log('inizio la somma. quanto vale la varibile sommaPesoZucchine? perchè dovrebbe valere 0...', sommaPesoZucchine);
+    //
+    // console.log('inizio la somma. quanto vale la varibile sommaPesoZucchine? perchè dovrebbe valere 0...', sommaPesoZucchine);
 
     // Somma dei pesi di tutte le zucchine
     for (var i = 0; i < arrayOggettiZucchine.length; i++) {

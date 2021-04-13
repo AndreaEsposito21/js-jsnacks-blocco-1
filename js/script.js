@@ -67,8 +67,6 @@ var arrayZucchine = [
     }
 ];
 
-var sommaPesoZucchine = 0;
-
 // Array zucchine lunghe < 15 cm
 var arrayZucchinePiccole = [];
 
@@ -96,8 +94,12 @@ for (var j = 0; j < arrayZucchine.length; j++) {
 
     };
 };
-console.log(arrayZucchinePiccole);
-console.log(arrayZucchineGrandi);
+
+// TEST
+console.log('zucchine piccole', arrayZucchinePiccole);
+console.log('zucchine grandi', arrayZucchineGrandi);
+//
+
 
 // Peso totale di arrayZucchinePiccole
 var sommaPesiZucchinePiccole = pesoZucchine(arrayZucchinePiccole);
@@ -107,9 +109,15 @@ console.log('Somma peso zucchine piccole: ', sommaPesiZucchinePiccole, 'kg');
 var sommaPesiZucchineGrandi = pesoZucchine(arrayZucchineGrandi);
 console.log('Somma peso zucchine grandi: ', sommaPesiZucchineGrandi, 'kg');
 
+
 // Funzione che somma i pesi delle zucchine
 //
 function pesoZucchine(arrayOggettiZucchine) {
+
+    var sommaPesoZucchine = 0;
+
+    console.log('inizio la somma. quanto vale la varibile sommaPesoZucchine? perchè dovrebbe valere 0...', sommaPesoZucchine);
+
     // Somma dei pesi di tutte le zucchine
     for (var i = 0; i < arrayOggettiZucchine.length; i++) {
         var thisZucchine = arrayOggettiZucchine[i];

@@ -67,10 +67,11 @@ var arrayZucchine = [
     }
 ];
 
-var sommaZucchine = 0;
+var sommaPesoZucchine = 0;
 for (var i = 0; i < arrayZucchine.length; i++) {
     var thisZucchine = arrayZucchine[i];
 
-    
-    
+    sommaPesoZucchine += thisZucchine.peso;   
 };
+
+console.log(sommaPesoZucchine);
